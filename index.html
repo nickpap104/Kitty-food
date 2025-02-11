@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitty Food</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header>
+        <!-----------------------Logo top left------------------------>
+
+        <div class="header-left">
+          <a href="index.html">
+            <img src="logo.svg" alt="logo file" />
+          </a>
+          <div class="divider hide-mobile"></div>
+          <a href="#" class="home hide-mobile">Home</a>
+        </div>
+
+        <!------------------------Hamburger menu------------------------->
+        <nav>
+          <a href="#" class="menu-open hide-desktop">
+            <img src="menu.svg" alt="menu" />
+          </a>
+          <ul>
+            <!------------------------X symbol------------------------->
+            <li class="hide-desktop">
+              <a href="#" class="menu-close">
+                <img src="close.svg" alt="closing button" />
+              </a>
+            </li>
+            <!------------------------Navigator------------------------->
+            <li><a href="#">Our Food</a></li>
+            <li><a href="#">Ingredients</a></li>
+            <li><a href="#">Studies</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <h1>
+          <!-------------------Text description------------------>
+          Your Cat will go <img src="bonkers.svg" alt="bonkers text" />
+        </h1>
+        <p class="subhead">
+          For the world's best tasting cat food, sourced with only the finest
+          Ingredients. Made with love in the heart of the UK.
+        </p>
+        <a href="#" class="primary-cta">Get Bonkers</a>
+      </main>
+
+      <div class="cat-container">
+        <div class="cat">
+          <img src="cat.png" alt="cat illustration" />
+          <div class="inner-circle"></div>
+          <div class="outer-circle"></div>
+        </div>
+      </div>
+    </div>
+    <!-------------------Javascript for window animation------------------>
+
+    <script>
+      const menu = document.querySelector("nav ul");
+      const menuBtn = document.querySelector(".menu-open");
+      const closeBtn = document.querySelector(".menu-close");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.add("open");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menu.classList.remove("open");
+      });
+    </script>
+  </body>
+</html>
